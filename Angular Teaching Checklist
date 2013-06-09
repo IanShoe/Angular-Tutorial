@@ -1,0 +1,9 @@
+Angular Teaching Checklist
+
+
+1. Binding
+2. Dependency Injection
+3. Directives
+4. Routing
+5. Example directives/filters  (ng-repeat, orderby)
+6. Scope

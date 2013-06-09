@@ -1,0 +1,22 @@
+<div class="toolbar">
+	<input type="text" ng-model="searchFilter" placeholder="Filter" style="width: 150px">
+	<select ng-model="searchSort">
+		<option value="">None</option>
+		<option value="name">Name</option>
+	</select>
+	<button class="btn" ng-click="addDeveloper()"><i class="icon-plus"></i> New Developer</button>
+</div>
+<ul class="list-container">
+	<li class="developer-list-item" ng-repeat="developer in developers | filter:searchFilter | orderBy:searchSort" ng-click="selectDeveloper(developer)">
+		<div class="image-container">
+			<img class="developer-image" ng-src="{{developer.image}}">
+			<figcaption>{{developer.name}}</figcaption>
+		</div>
+	</li>
+</ul>
+
+<div class="top">
+	<span class="title" ng-show="mode == 'Directive'">{{currentDeveloper.name}}'s </span><span class="title">{{mode}}</span>
+	<button class="btn pull-right" ng-click="toggleMode()">Toggle Mode</button>
+</div>
+<ng-include src="'partials/'+mode.toLowerCase()+'.html'"></ng-include>

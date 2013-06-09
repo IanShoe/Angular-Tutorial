@@ -1,0 +1,12 @@
+<div class="edit-container" ng-controller="editCtrl">
+	<div>
+		Developer Name
+		<input ng-model="currentDeveloper.name">
+	</div>
+	<div>
+		Tag
+		<input ng-model="tag">
+		<button class="btn" ng-click="addTag()" ng-disabled="!tag"><i class="icon-plus"></i> Add Tag</button>
+		<button class="btn" ng-click="addAll()" ng-disabled="!tag"><i class="icon-plus"></i> Add To All</button>
+	</div>
+</div>
