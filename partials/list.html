@@ -1,5 +1,5 @@
 <div class="toolbar">
-	<input type="text" ng-model="searchFilter" placeholder="Filter" style="width: 150px">
+	<input type="text" ng-model="searchFilter" placeholder="Filter">
 	<select ng-model="searchSort">
 		<option value="">None</option>
 		<option value="name">Name</option>
@@ -16,7 +16,7 @@
 </ul>
 
 <div class="top">
-	<span class="title" ng-show="mode == 'Directive'">{{currentDeveloper.name}}'s </span><span class="title">{{mode}}</span>
+	<span class="title">{{mode}}</span>
 	<button class="btn pull-right" ng-click="toggleMode()">Toggle Mode</button>
 </div>
 <ng-include src="'partials/'+mode.toLowerCase()+'.html'"></ng-include>

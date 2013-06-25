@@ -67,7 +67,7 @@ function listCtrl($scope) {
 		name: 'Derek Ivey',
 		image: 'images/fuuuface.png',
 		tags: ['Ginger', 'Systems Dude', 'Networking']
-	}]
+	}];
 
 	$scope.currentDeveloper = $scope.developers[0];
 
@@ -79,12 +79,7 @@ function listCtrl($scope) {
 
 	$scope.mode = 'Edit'
 	$scope.toggleMode =function(){
-		if($scope.mode == 'Edit'){
-			$scope.mode = 'Directive';
-		}
-		else {
-			$scope.mode = 'Edit';
-		}
+		$scope.mode = ($scope.mode == 'Edit') ? 'Directive': 'Edit';
 	}
 
 	$scope.addDeveloper = function(){
@@ -109,5 +104,34 @@ function editCtrl($scope){
 }
 
 function directiveCtrl($scope){
-
+	$scope.fields = [
+		{
+			name: 'Text Input',
+			type: 'text',
+			placeholder: 'Enter text here',
+			required: false,
+			order: 0
+		},
+		{
+			name: 'Email Input',
+			type: 'email',
+			placeholder: 'Enter email here',
+			required: true,
+			order: 1
+		},
+		{
+			name: 'Url Input',
+			type: 'url',
+			placeholder: 'Enter url here',
+			required: true,
+			order: 2
+		},
+		{
+			name: 'Text Area',
+			type: 'textarea',
+			placeholder: 'Enter text here',
+			required: true,
+			order: 3
+		},
+	];
 }

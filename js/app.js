@@ -1,4 +1,4 @@
-var tutorialApp = angular.module('tutorialApp', []);
+var tutorialApp = angular.module('tutorialApp', ['tutorial.directives', 'formGeneratorModule']);
 
 tutorialApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 	$routeProvider.
