@@ -5,9 +5,10 @@
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="lib/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<link rel="stylesheet" type="text/css" href="css/finger-classes.css">
 	<!-- Libraries -->
 	<script src="lib/js/angular.js"></script>
-	<script src="modules/form-generator-module/form-generator.js"></script>
+	<script src="modules/angular-form-generator/js/form-generator.js"></script>
 
 	<!-- App Javascripts -->
 	<script src="js/app.js"></script>
@@ -25,13 +26,10 @@
 			<ul class="nav">
 				<li class="fader"><a href="home" ng-class="{active: navActive=='home'}"><i class="icon-home icon-white"></i> Home</a></li>
 				<li class="fader"><a href="list" ng-class="{active: navActive=='list'}"><i class="icon-book icon-white"></i> Developers</a></li>
-				<li class="fader"><a href="about" ng-class="{active: navActive=='about'}"><i class="icon-info-sign icon-white"></i> About</a></li>
 			</ul>
 		</div>
 	</div>
-
-
-	<div class="container" style="margin-top: 10px;">
+	<div style="margin: 10px;">
 		<ng-view></ng-view>
 	</div>
 </body>

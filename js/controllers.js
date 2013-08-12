@@ -10,63 +10,68 @@ function listCtrl($scope) {
 	$scope.developers = [
 	{
 		name: 'Ian Shoemaker',
-		image: 'images/fuuuface.png',
-		tags: ['Web', 'Node', 'Java', 'Angular', 'Asian']
+		tags: ['Web', 'Node', 'Java', 'Angular', 'Asian'],
+		languages: []
 	},
 	{
 		name: 'Derek Hall',
-		image: 'images/fuuuface.png',
-		tags: ['Web', 'Node', 'Java', 'Angular', 'Badass']
+		tags: ['Web', 'Node', 'Java', 'Angular', 'Badass'],
+		languages: ['java']
 	},
 	{
 		name: 'Ken Frazier',
-		image: 'images/fuuuface.png',
-		tags: ['iOS', 'Android', 'Meathead']
+		tags: ['iOS', 'Android', 'Meathead'],
+		languages: []
 	},
 	{
 		name: 'Donald Renner',
-		image: 'images/fuuuface.png',
-		tags: ['Web', 'Java', 'Kiosk', 'Android', 'Blackberry']
+		tags: ['Web', 'Java', 'Kiosk', 'Android', 'Blackberry'],
+		languages: []
 	},
 	{
 		name: 'Joe Sharp',
-		image: 'images/fuuuface.png',
-		tags: ['Web', 'Javascript', 'Java', '']
+		tags: ['Web', 'Javascript', 'Java', ''],
+		languages: []
 	},
 	{
 		name: 'Ryan Chandler',
-		image: 'images/fuuuface.png',
-		tags: ['Java', 'Web', 'Kiosk', 'Hadoop']
+		tags: ['Java', 'Web', 'Kiosk', 'Hadoop'],
+		languages: []
 	},
 	{
 		name: 'Ryan Bohn',
-		image: 'images/fuuuface.png',
-		tags: ['Javascript', 'Javascript Ninja', 'Web', 'Node']
+		tags: ['Javascript', 'Javascript Ninja', 'Web', 'Node'],
+		languages: []
 	},
 	{
 		name: 'John Mann',
-		image: 'images/fuuuface.png',
-		tags: ['Web', 'Javascript', 'Doesn\'t like beandipping']
+		tags: ['Web', 'Javascript', 'Doesn\'t like beandipping'],
+		languages: []
 	},
 	{
 		name: 'Bill Kratzer',
-		image: 'images/fuuuface.png',
-		tags: ['Dancer', 'Bacon', 'Web', 'Java', 'Javascript', 'Kiosk']
+		tags: ['Dancer', 'Bacon', 'Web', 'Java', 'Javascript', 'Kiosk'],
+		languages: []
 	},
 	{
 		name: 'Clint Martin',
-		image: 'images/fuuuface.png',
-		tags: ['Noobie', 'Javascript', 'Node', 'Fresh Outta College']
+		tags: ['Noobie', 'Javascript', 'Node', 'Fresh Outta College'],
+		languages: []
 	},
 	{
 		name: 'Dave Sailer',
-		image: 'images/fuuuface.png',
-		tags: ['iOS', 'Android']
+		tags: ['iOS', 'Android'],
+		languages: []
+	},
+	{
+		name: 'Jonathan Lantzy',
+		tags: ['Systems Dude', 'Windows', 'OS Master'],
+		languages: []
 	},
 	{
 		name: 'Derek Ivey',
-		image: 'images/fuuuface.png',
-		tags: ['Ginger', 'Systems Dude', 'Networking']
+		tags: ['Ginger', 'Systems Dude', 'Networking'],
+		languages: []
 	}];
 
 	$scope.currentDeveloper = $scope.developers[0];
@@ -106,32 +111,91 @@ function editCtrl($scope){
 function directiveCtrl($scope){
 	$scope.fields = [
 		{
-			name: 'Text Input',
+			label: 'Name',
+			model: 'currentDeveloper.name',
 			type: 'text',
 			placeholder: 'Enter text here',
 			required: false,
 			order: 0
 		},
 		{
-			name: 'Email Input',
+			label: 'Email',
+			model: 'currentDeveloper.email',
 			type: 'email',
 			placeholder: 'Enter email here',
 			required: true,
 			order: 1
 		},
 		{
-			name: 'Url Input',
+			label: 'Website',
+			model: 'currentDeveloper.website',
 			type: 'url',
 			placeholder: 'Enter url here',
 			required: true,
 			order: 2
 		},
 		{
-			name: 'Text Area',
+			label: 'About',
+			model: 'currentDeveloper.description',
 			type: 'textarea',
 			placeholder: 'Enter text here',
 			required: true,
 			order: 3
 		},
+		{
+			label: 'Coding Experience',
+			model: 'currentDeveloper.codingExperience',
+			type: 'radio',
+			options: [
+				{
+					label: 'Junior',
+					value: 'junior'
+				},
+				{
+					label: 'Intermediate',
+					value: 'intermediate'
+				},
+				{
+					label: 'Senior',
+					value: 'senior'
+				},
+				{
+					label: 'Badass',
+					value: 'badass'
+				}
+			]
+		},
+		{
+			label: 'Good at Coding',
+			model: 'currentDeveloper.codingGoodness',
+			type: 'checkbox' 	
+		},
+		{
+			label: 'Languages',
+			model: 'currentDeveloper.languages',
+			type: 'checkbox',
+			options: [
+				{
+					label: 'Java',
+					value: 'java'
+				},
+				{
+					label: 'JavaScript',
+					value: 'javascript'
+				},
+				{
+					label: 'C++',
+					value: 'c++'
+				},
+				{
+					label: 'Python',
+					value: 'python'
+				},
+				{
+					label: 'Objective-C',
+					value: 'objective-c'
+				}
+			]
+		}
 	];
 }

@@ -1,15 +1,6 @@
-.fader img, .fader i {
-	opacity: 0.4;
-}
-
-.fader a:hover i{
-	opacity: 1;
-}
-
 .developer-list-item {
 	list-style: none;
 	display: inline-block;
-	border: solid 1px black;
 	margin: 5px;
 }
 
@@ -24,6 +15,10 @@
 	height: 100px;
 	width:100px;
 	overflow: hidden;
+}
+
+.developer-image:hover {
+	cursor: pointer;
 }
 
 .list-container {
@@ -61,14 +56,4 @@ figcaption{
 
 select, input{
 	margin-bottom: 0 !important;
-}
-
-.finger-image {
-	height: 100px;
-	width: 100px;
-	background-image: url('/images/middle-finger.jpeg');
-}
-
-.ian-shoemaker {
-	border: 1px solid red;
 }

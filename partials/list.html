@@ -8,10 +8,8 @@
 </div>
 <ul class="list-container">
 	<li class="developer-list-item" ng-repeat="developer in developers | filter:searchFilter | orderBy:searchSort" ng-click="selectDeveloper(developer)">
-		<div class="image-container">
-			<img class="developer-image" ng-src="{{developer.image}}">
-			<figcaption>{{developer.name}}</figcaption>
-		</div>
+		<finger developer="developer.name"></finger>
+		<figcaption>{{developer.name}}</figcaption>
 	</li>
 </ul>
 

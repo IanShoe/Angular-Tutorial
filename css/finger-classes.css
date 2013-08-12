@@ -1,0 +1,72 @@
+.finger-image {
+	background-image:url('../images/middle-finger.jpeg');
+	height: 250px;
+	width: 250px;
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: black;
+	cursor: pointer;
+}
+
+.finger-image:hover {
+	box-shadow: 0px 0px 100px #1d891f !important;
+}
+
+.ian-shoemaker {
+	background-position: -762px -880px;
+}
+
+.derek-hall {
+	background-position: -1020px -705px;
+}
+
+.ken-frazier {
+	background-position: -565px -910px;	
+}
+
+.donald-renner {
+	background-position: -2330px -800px;
+}
+
+.joe-sharp {
+	background-position: -1700px -570px;
+}
+
+.ryan-chandler {
+	background-position: -1870px -660px;
+}
+
+.ryan-bohn {
+	background-position: -855px -710px;
+}
+
+.john-mann {
+	background-position: -300px -1300px;
+}
+
+.bill-kratzer {
+	background-position: -2069px -690px;
+}
+
+.clint-martin {
+	background-image:url('../images/fuuuface.png');
+	background-size: cover;
+}
+
+.dave-sailer {
+	background-position: -1096px -604px;
+}
+
+.jonathan-lantzy {
+	background-position: -2586px -962px;
+}
+
+.derek-ivey {
+	background-position: -2926px -1108px;
+}
+
+.finger-image.selected {
+	/*border-color: red !important;*/
+	box-shadow: 0px 0px 100px #c70002;
+}

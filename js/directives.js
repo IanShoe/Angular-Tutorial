@@ -5,15 +5,14 @@ angular.module('tutorial.directives', []).
 directive('finger', function() {
 	return {
 		restrict: 'E',
-		scope: {
-			developer: '='
-		},
-		link: function(scope) {
+		scope: true,
+		link: function(scope, elem, attrs) {
+			scope.developer = scope.$eval(attrs.developer);
 			scope.$watch('developer', function() {
 				scope.class = loweredAndDashed(scope.developer);
 			});
 		},
-		template: '<div class="{{class}} finger-image"></div>'
+		template: '<div ng-class="{\'selected\': currentDeveloper.name == developer}" class="{{class}} finger-image"></div>'
 	}
 });
 
